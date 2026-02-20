@@ -3,128 +3,140 @@ background-image: url("assets/banner.png");
   background-size: cover;     /* makes image fill entire area */
   background-position: center; 
   background-repeat: no-repeat;
-    
 }
 
 .container {
   display: flex; 
   font: 8pt Verdana, Tahoma, sans-serif;
-  
 }
 
 .box {
   flex: 1;
-  
 }
-
-
 
 .poster {
     display: grid;
     grid-template-columns: repeat(3, 100px); /* 3 columns */
-    grid-template-rows: repeat(3, 100px);
-    gap: 50px 20px;
-    justify-content: left;
+    gap: 0px 10px;
     margin: 10px;
     width: 550px;
-    
-    
 }
-
 
 .poster-item {
     text-align: center;
-    
-    
-    
 }
 
-
+.poster img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
 
 .poster-item img {
     width: 100px;
-    height: 100px;
-    border: 5px solid red;
-    border-radius: 10px;
+    height: 150px;
+    border-radius: 10px;   
     
 }
 
 .poster-item h1 {
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .banner {
     grid-column: 1 / -1;   /* spans entire width */
     display: block;
-    border: 5px solid red;
     border-radius: 10px;
     width: 100%;
-    
-
 }
 
 .review {
-    
     background-color: #E1D697;
     display: grid;
-    grid-template-columns: repeat(2, 47%); /* 2 columns */
-    grid-template-rows: repeat(3, 200px);
-    gap: 2%;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px 10px;
     margin: 10px 10px;
     border-radius: 10px;
-    border: 2px solid gray;
-    
-    
+    justify-content: center;
 }
+
 .review div {
-    height: 100px;
-    box-shadow: 10px;
     border: 1px solid white;
     background-color: white;
-    margin: 10px 10px;
     border-radius: 10px;
     padding: 8px;
-    
-
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 4px 10px;
 }
+
+.review div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.review-stars {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: left;
+}
+
+.review-stars span {
+    margin-left: auto;
+}
+
 
 .review p {
-
     margin: 10px 10px;
 }
+
+
+
 .review img {
     justify-content: left;
     width: 20px;
-    
-
 }
 
 .details {
     background-color: #A2B964;
     gap: 10px;
-    width: 250px;
+    width: 50px;
     font: 8pt Arial, sans-serif;
     padding: 10px;
     margin: 10px;
+    
 }
 
 .details h1 {
     font-size: 20px;
-
+    
 }
 
 .details h2 {
     font-size: 10px;
-
+    line-height: 1;
 }
 
+.center {
+    text-align: center; /* centers inline/inline-block children horizontally */
+}
+
+.center h3 {
+    display: inline-block;       /* shrink to text width */
+    border: 1px solid black;      /* border around text only */
+    background-color: black;      /* background for the "pill" */
+    color: white;                /* text color */
+    border-radius: 20px;         /* rounded corners */
+    padding: 4px 12px;           /* spacing inside the border */
+    margin: 0;                   /* remove default h3 margin */
+    text-align: center;           /* text centered inside the pill */
+}
 
 main {
     flex: 3;
     margin: 10px;
     display: flex; 
-     
-    border: 1px solid black;
+    border: 2px solid gray;
     border-radius: 10px;
     justify-content: left;
 }
@@ -133,10 +145,31 @@ aside {
     flex: 1;
     padding: 20px;
     border-radius: 10px;
-    
 }
-
 
 body {
     margin: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.socials a {
+  color: black; /* icon color */
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: white;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 1px;
+    
 }
